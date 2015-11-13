@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ ! -d /var/run/mysqld ]; then
+  install -m 755 -o mysql -q root -d /var/run/mysqld
+fi
+
+/lib/init/apparmor-profile-load usr.sbin.mysqld
+/usr/sbin/mysqld

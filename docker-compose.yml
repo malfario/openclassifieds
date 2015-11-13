@@ -1,0 +1,9 @@
+oc-data:
+  build: oc-data/
+
+oc:
+  build: .
+  ports:
+    - 80:80
+  volumes_from:
+    - oc-data
