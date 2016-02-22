@@ -3,6 +3,7 @@ oc-data:
 
 oc:
   build: .
+  restart: always
   ports:
     - 80:80
   volumes_from:
